@@ -1,3 +1,6 @@
+### Intro
+This code is for RouterOS v7+
+
 ### Easy to Use
 
 ```ts
