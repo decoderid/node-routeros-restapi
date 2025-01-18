@@ -4,10 +4,22 @@ export default class RouterOSRestApi {
 
     static config: ConfigType
 
+    /**
+     * Initialize your setup
+     * 
+     * @param config ConfigType Interface
+     */
     static setup(config: ConfigType) {
         this.config = config
     }
 
+    /**
+     * Http Client Request
+     * 
+     * @param path string reference terminal
+     * @param options RequestInit | undefined
+     * @returns Promise<unknown>
+     */
     private static async httpClient(path: string, options?: RequestInit): Promise<unknown> {
         try {
             const cleanPath = path.startsWith("/") ? path.slice(1) : path;
